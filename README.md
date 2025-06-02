@@ -16,3 +16,13 @@ ng --version
 ```
 ng new gerador-certificado
 ```
+
+### Criar componentes ignorando a criação do arquivo de teste
+```
+ng g c <nome_componente> --skip-tests
+```
+
+### Executar o projeto
+```
+ng serve
+```
