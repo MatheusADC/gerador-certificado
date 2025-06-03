@@ -26,3 +26,13 @@ ng g c <nome_componente> --skip-tests
 ```
 ng serve
 ```
+
+### Instalar o framework Bootstrap
+```
+npm install bootstrap
+```
+
+### Instalar a biblioteca do Phosphor Icons
+```
+npm install @phosphor-icons/web
+```
