@@ -36,3 +36,8 @@ npm install bootstrap
 ```
 npm install @phosphor-icons/web
 ```
+
+### Remover todos os *imports* que não estão sendo usados
+```
+ng generate @angular/core:cleanup-unused-imports
+```
