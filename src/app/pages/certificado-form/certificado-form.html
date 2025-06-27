@@ -27,6 +27,7 @@
         }
       </div>
       <app-secondary-button
+        [disabled]="true"
         textoBotao="Adicionar"
         phClass="ph ph-plus"
         [ngStyle]="campoInvalido(atividadeRef) ? {'margin-bottom': '24px'} : {}">
