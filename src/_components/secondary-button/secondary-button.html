@@ -1,4 +1,6 @@
 <button class="custom-button">
-  <i class="{{phClass}}"></i>
+  @if (phClass) {
+    <i class="{{phClass}}"></i>
+  }
   {{textoBotao}}
 </button>
