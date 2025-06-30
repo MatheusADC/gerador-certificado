@@ -4,20 +4,22 @@ import { PrimaryButton } from "../../_components/primary-button/primary-button";
 import { FormsModule, NgModel } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Certificado } from '../../interfaces/certificado';
+import { Certificado as CertificadoService } from '../../_services/certificado';
 
 @Component({
   selector: 'app-certificado-form',
-  // Para poder usar o ngModel tem que importar o FormsModule. O ngModel permite receber as variáveis em tempo real (two way binding). Pesquisa també sobre one way binding.
-  // Para aplicar o estilo dinamicamente com ngstyle tem que importar o commom module.
   imports: [SecondaryButton, PrimaryButton, FormsModule, CommonModule],
   templateUrl: './certificado-form.html',
   styleUrl: './certificado-form.css'
 })
 export class CertificadoForm {
 
+  constructor(private certificadoService: CertificadoService) {}
+
   certificado: Certificado = {
     atividades: [],
-    nome: ''
+    nome: '',
+    dataEmissao: ''
   };
   atividade: string = '';
 
@@ -42,5 +44,17 @@ export class CertificadoForm {
     if(!this.formValido()) {
       return;
     }
+    this.certificado.dataEmissao = this.dataAtual();
+    this.certificadoService.adicionarCertificado(this.certificado);
+  }
+
+  dataAtual() {
+    const dataAtual = new Date();
+    const dia = String(dataAtual.getDate()).padStart(2, '0')
+    const mes = String(dataAtual.getMonth() + 1).padStart(2, '0')
+    const ano = dataAtual.getFullYear();
+
+    const dataFormatada = `${dia}/${mes}/${ano}`;
+    return dataFormatada;
   }
 }
