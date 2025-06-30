@@ -41,3 +41,8 @@ npm install @phosphor-icons/web
 ```
 ng generate @angular/core:cleanup-unused-imports
 ```
+
+### Criar serviço ignorando a criação do arquivo de teste
+```
+ng g s <nome_serviço> --skip-tests
+```
