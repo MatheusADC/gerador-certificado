@@ -7,7 +7,6 @@ import { Certificado } from '../../interfaces/certificado';
 import { Certificado as CertificadoService } from '../../_services/certificado';
 import { v4 as uuidv4 } from 'uuid';
 
-
 @Component({
   selector: 'app-certificado-form',
   imports: [SecondaryButton, PrimaryButton, FormsModule, CommonModule],
@@ -36,6 +35,10 @@ export class CertificadoForm {
   }
 
   adicionarAtividade() {
+    if(this.atividade.length == 0) {
+      return
+    }
+
     this.certificado.atividades.push(this.atividade);
     this.atividade = '';
   }
