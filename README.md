@@ -46,3 +46,8 @@ ng generate @angular/core:cleanup-unused-imports
 ```
 ng g s <nome_serviço> --skip-tests
 ```
+
+### Instalar a biblioteca uuid
+```
+npm install uuid
+```
