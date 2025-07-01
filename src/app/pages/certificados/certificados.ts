@@ -3,7 +3,7 @@ import { ItemCertificado } from "../../_components/item-certificado/item-certifi
 import { SecondaryButton } from "../../_components/secondary-button/secondary-button";
 import { RouterLink } from '@angular/router';
 import { Certificado as certificadoService} from '../../_services/certificado';
-import { Certificado } from '../certificado/certificado';
+import { Certificado } from '../../interfaces/certificado';
 
 
 @Component({
