@@ -11,7 +11,7 @@ export class Certificado {
   constructor() { }
 
   adicionarCertificado(certificado: ICertificado) {
-    this.certificados.push(certificado);
+    this.certificados.push({...certificado});
     // console.log(this.certificados);
   }
 }
