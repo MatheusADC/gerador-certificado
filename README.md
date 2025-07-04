@@ -56,3 +56,8 @@ npm install uuid
 ```
 npm install html2canvas
 ```
+
+### Executar a build
+```
+ng build --configuration=production
+```
