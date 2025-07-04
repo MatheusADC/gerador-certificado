@@ -51,3 +51,8 @@ ng g s <nome_serviço> --skip-tests
 ```
 npm install uuid
 ```
+
+### Instalar html2canvas
+```
+npm install html2canvas
+```
